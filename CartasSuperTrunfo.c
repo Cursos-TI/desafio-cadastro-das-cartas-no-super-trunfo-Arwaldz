@@ -5,47 +5,47 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
 
+#include <stdio.h>
+#include <string.h> // Para usar strcspn
+
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     int codigo, populacao, pontos_turisticos;
     char nome[50];
     float area, pib;
     
     // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    // Cadastro das cartas
-    printf("Cadastro da Cidade\n");
+    printf("Cadastro da Cidade\n"); // Serve como título do programa
 
-    //Código da cidade
-    printf("Digite o código da cidade: ");
-    scanf("%d, &codigo);
+    // Código da cidade
+    printf("Digite o código da cidade: "); // Primeiro input a ser dado pelo usuário
+    scanf("%d", &codigo);
+    while (getchar() != '\n'); // Limpa o buffer de entrada, pois o programa estava solicitando mais de um dado a partir da segunda linha
 
-    //Nome da cidade
-    printf("Digite o nome da cidade: ");
-    scanf(" %[^\n]", nome;)
+    // Nome da cidade
+    printf("Digite o nome da cidade: "); // Segundo input
+    scanf(" %[^\n]", nome); // Com o %[^\n] o programa captura a linha inteira, permitindo que o usuário digite o nome de cidades que possuam espaços
 
-    //População da cidade
-    printf("Digite a população da cidade: ");
+    // População da cidade
+    printf("Digite a população da cidade: "); //Terceiro input
     scanf("%d", &populacao);
+    while (getchar() != '\n'); // Limpa o buffer de entrada conforme comentário acima
     
-    //Área da cidade
-    printf("Digite a área da cidade (em km²): ");
+    // Área da cidade
+    printf("Digite a área da cidade (em km²): "); //Quarto input
     scanf("%f", &area);
+    while (getchar() != '\n'); // Limpa o buffer de entrada conforme comentário acima
 
-    //PIB da cidade
-    printf("Digite o PIB da cidade (em milhões): ");
+    // PIB da cidade
+    printf("Digite o PIB da cidade (em milhões): "); //Quinto input
     scanf("%f", &pib);
+    while (getchar() != '\n'); // Limpar o buffer de entrada conforme comentário acima
 
-    //Número de pontos turísticos
-    printf("Digite o número de pontos turísticos: ");
+    // Número de pontos turísticos
+    printf("Digite o número de pontos turísticos: "); //Sexto input
     scanf("%d", &pontos_turisticos);
+    while (getchar() != '\n'); // Limpar o buffer de entrada conforme comentário acima
     
     // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
     printf("\nDados da Cidade Cadastrada:\n");
     printf("Código: %d\n", codigo);
     printf("Nome: %s\n", nome);
